@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Hello, World!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="grid"></div>
+
+      <section class="content" aria-labelledby="page-title">
+        <div class="badge"><span></span> First page, great beginning</div>
+        <p class="eyebrow">A tiny message with a big welcome</p>
+        <h1 id="page-title">Hello,<br /><em>World!</em></h1>
+        <p class="intro">
+          The web is ready for your next idea. Start small, make it beautiful,
+          and see where curiosity takes you.
+        </p>
+        <button class="explore" type="button" id="helloButton">
+          <span>Say hello back</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </button>
+        <p class="reply" id="reply" aria-live="polite"></p>
+      </section>
+
+      <footer>
+        <span>01 — BEGIN</span>
+        <span>MADE WITH WONDER</span>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
