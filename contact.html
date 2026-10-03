@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Contact | Hello, World!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="inner-page">
+      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="grid"></div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">HELLO<span>_</span></a>
+        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a></div>
+      </nav>
+      <section class="page-content" aria-labelledby="contact-title">
+        <p class="eyebrow">Let’s make a connection</p>
+        <h1 id="contact-title">Say<br /><em>hello.</em></h1>
+        <form class="contact-form" id="contactForm">
+          <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+          <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
+          <label>Message<textarea name="message" rows="3" placeholder="What’s on your mind?" required></textarea></label>
+          <button class="explore" type="submit"><span>Send message</span><span class="arrow" aria-hidden="true">↗</span></button>
+          <p class="reply" id="formReply" aria-live="polite"></p>
+        </form>
+      </section>
+      <footer><span>03 — CONTACT</span><span>THE FIRST STEP IS A HELLO</span></footer>
+    </main>
+    <script>
+      document.querySelector('#contactForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        document.querySelector('#formReply').textContent = 'Thanks! Your hello has been received.';
+        event.currentTarget.reset();
+      });
+    </script>
+  </body>
+</html>

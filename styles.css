@@ -32,6 +32,14 @@ body {
 
 .content { align-self: center; position: relative; z-index: 2; max-width: 740px; }
 
+.site-nav { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.brand { color: var(--ink); font: 500 .9rem "DM Mono", monospace; letter-spacing: .09em; text-decoration: none; }
+.brand span { color: var(--cyan); }
+.nav-links { display: flex; gap: clamp(.8rem, 3vw, 2rem); }
+.nav-links a { color: var(--muted); font: 500 .78rem "DM Mono", monospace; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover, .nav-links .active { color: var(--ink); }
+.nav-links .active::after { content: ""; display: block; width: 100%; height: 1px; margin-top: .3rem; background: var(--cyan); }
+
 .badge, .eyebrow, footer {
   font-family: "DM Mono", monospace;
   letter-spacing: .1em;
@@ -75,6 +83,21 @@ h1 em { color: transparent; font-style: normal; -webkit-text-stroke: 2px #d6cfff
 .orb-two { width: 24rem; height: 24rem; right: 28%; bottom: -15rem; background: #3bb1d0; filter: blur(70px); opacity: .25; }
 .grid { position: absolute; inset: 0; z-index: -1; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(to bottom, transparent, black 40%, transparent); }
 footer { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 1rem; color: #88869f; font-size: .65rem; }
+
+.inner-page { isolation: isolate; min-height: 100svh; overflow: hidden; position: relative; display: grid; grid-template-rows: auto 1fr auto; gap: 2rem; padding: clamp(2rem, 6vw, 5rem); background: radial-gradient(circle at 12% 78%, #18214c 0, transparent 27%), linear-gradient(135deg, #090d1c 15%, #111334 100%); }
+.page-content { position: relative; z-index: 2; align-self: center; max-width: 900px; }
+.page-content h1 { font-size: clamp(4rem, 10vw, 8rem); }
+.two-column { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr); gap: clamp(2rem, 8vw, 7rem); align-items: center; margin-top: 2.5rem; }
+.two-column .intro { margin: 0; }
+.fact-card { padding: 1.6rem; border: 1px solid rgba(255,255,255,.15); border-radius: 1.2rem; background: rgba(255,255,255,.06); box-shadow: 0 20px 50px rgba(0,0,0,.18); backdrop-filter: blur(10px); }
+.card-number { color: var(--cyan); font: .75rem "DM Mono", monospace; }
+.fact-card h2 { margin: 1.2rem 0 .55rem; font-size: 1.45rem; }
+.fact-card p { margin: 0; color: var(--muted); line-height: 1.5; }
+.contact-form { display: grid; gap: 1rem; max-width: 570px; margin-top: 2rem; }
+.contact-form label { display: grid; gap: .45rem; color: #d9d7ed; font: .7rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+.contact-form input, .contact-form textarea { width: 100%; padding: .85rem 1rem; border: 1px solid rgba(255,255,255,.18); border-radius: .55rem; outline: none; background: rgba(5,8,27,.42); color: var(--ink); font: 1rem Outfit, sans-serif; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(97,226,230,.12); }
+.contact-form .explore { justify-self: start; margin-top: .4rem; }
 
 @keyframes float { 50% { transform: translate(-4%, 6%) rotate(12deg); } }
 @media (max-width: 640px) { .hero { padding: 2rem 1.5rem; } .orb-one { width: 25rem; right: -13rem; top: 2rem; opacity: .55; } h1 { font-size: clamp(4.2rem, 20vw, 6.5rem); } h1 em { -webkit-text-stroke-width: 1px; } .intro { margin-top: 2rem; } footer { margin-top: 3rem; } }
